@@ -6,4 +6,4 @@ pages:
 - Introduction: index.md
 - Database:
     - Code First: code-first/create-database.md
-- StoredProcedure: sql/storedprocedures.md
+#- StoredProcedure: sql/storedprocedures.md
