@@ -7,12 +7,12 @@ pages:
 
 - SQL:
     - Create a Context: sql/context.md
-    - Database:
+    #- Database:
         - Code First: sql/create-database.md
-    - Reading Data:
-        - Select: sql/select.md
+    #- Reading Data:
+        - Reading Data: sql/select.md
     - StoredProcedure: sql/storedprocedures.md
 - SQLite:
     - Create a Context: sqlite/context.md
-    - Database:
+    #- Database:
         - Code First: sqlite/create-database.md
