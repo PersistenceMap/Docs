@@ -45,30 +45,7 @@ using (var context = provider.Open())
 	// use context to create Queries
 }
 ```
-## Reading Data from the Database
-### Select
-Simple select from a ***single*** Table:
-```csharp
-context.Select<Order>(o => o.ID == 1)
-```
-### Select with Join
-Join ***multiple*** Tables together into one Dataobject:
-```csharp
-context.From<Order>()
-	.Join<OrderDetail>((od, o) => od.OrderID == o.ID)
-	.Select<OrderWithDetail>()
-```
-Create a anonymous object that ***defines*** the fields for the select:
-```csharp
-context.From<Order>()
-	.Join<OrderDetail>((od, o) => od.OrderID == o.ID)
-	.For(() => new { ProductID = 0, OrderID = 0 })
-	.Select(a => new OrderDetail { ProductID = a.ProductID, OrderID = a.OrderID })
-```
-Compiles to:
-```sql
-select ProductID, OrderID from Order join OrderDetail on (OrderDetail.OrderID = Order.ID)
-```
+
 ## Editing Data
 For the Examples to edit Data we use the following Class that also represents a Table in the Database
 ```csharp

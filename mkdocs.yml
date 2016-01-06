@@ -4,6 +4,15 @@ repo_url: https://github.com/PersistenceMap/PersistenceMap
 
 pages:
 - Introduction: index.md
-- Database:
-    - Code First: code-first/create-database.md
-- StoredProcedure: sql/storedprocedures.md
+
+- SQL:
+    - Create a Context: sql/context.md
+    - Database:
+        - Code First: sql/create-database.md
+    - Reading Data:
+        - Select: sql/select.md
+    - StoredProcedure: sql/storedprocedures.md
+- SQLite:
+    - Create a Context: sqlite/context.md
+    - Database:
+        - Code First: sqlite/create-database.md
