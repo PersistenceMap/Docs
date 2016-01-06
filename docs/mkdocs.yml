@@ -4,5 +4,3 @@ repo_url: https://github.com/PersistenceMap/PersistenceMap
 
 pages:
 - 'Introduction': 'index.md'
-- 'Code First': 'code-first/create-database.md'
-- 'StoredProcedure': 'sql/storedprocedures.md'
