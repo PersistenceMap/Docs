@@ -1,7 +1,6 @@
-## Stored Procedures
 The Stored Procedure feature is only available on the SqlDatabaseContext.
 
-### Stored Procedure without result
+## Stored Procedure without result
 ```csharp
 context.Procedure("UpdateSalesByYear")
     .AddParameter("DateFrom", () => new DateTime(1970, 1, 1))
@@ -9,7 +8,8 @@ context.Procedure("UpdateSalesByYear")
 	.AddParameter("@value", () => somevalue)
     .Execute();
 ```
-### Stored Procedure with result
+
+## Stored Procedure with result
 ```csharp
 var sales = context.Procedure("SalesByYear")
     .AddParameter(() => new DateTime(1970, 1, 1))
@@ -35,7 +35,8 @@ var sales = context.Procedure("SalesByYear")
 	.Map("Date", sby => sby.StringDate, value => ((DateTime)value).ToShortDateString())
 	.Execute();
 ```
-### Stored Procedure with output parameter
+
+## Stored Procedure with output parameter
 ```csharp
 int id = 0;
 var proc = context.Procedure("SetSale")
