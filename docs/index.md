@@ -17,11 +17,12 @@ The Current Version of **PersistanceMap 0.4.0** is no longer supported! For futu
 ## Installation
 ------------------------------
 PersistenceMap can be installed from [NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) through the package manager console.  
-MSSql Server:  
+### MSSql Server
 ```
 PM > Install-Package PersistenceMap
 ```
-SQLite: 
+
+### SQLite 
 ``` 
 PM > Install-Package PersistenceMap.Sqlite
 ```
@@ -148,51 +149,3 @@ using (var context = provider.Open())
     context.Commit();
 }
 ```
-## Stored Procedures
-The Stored Procedure feature is only avaliable.
-### Stored Procedure without result
-```csharp
-context.Procedure("UpdateSalesByYear")
-    .AddParameter("DateFrom", () => new DateTime(1970, 1, 1))
-    .AddParameter(() => DateTime.Today)
-	.AddParameter("@value", () => somevalue)
-    .Execute();
-```
-### Stored Procedure with result
-```csharp
-var sales = context.Procedure("SalesByYear")
-    .AddParameter(() => new DateTime(1970, 1, 1))
-    .AddParameter(() => DateTime.Today)
-    .Execute<SalesByYear>();
-```
-Map fields if the field names of the resultset and the data object don't match:
-```csharp
-var sales = context.Procedure("SalesByYear")
-    .AddParameter(() => new DateTime(1970, 1, 1))
-    .AddParameter(() => DateTime.Today)
-    .For<SalesByYear>()
-	.Map("OrdersID", sby => sby.ID)
-	.Execute();
-```
-Convert a value from the resultset to a value in the data object:
-```csharp
-var sales = context.Procedure("SalesByYear")
-    .AddParameter(() => new DateTime(1970, 1, 1))
-    .AddParameter(() => DateTime.Today)
-    .For<SalesByYear>()
-	// converts the datetime provided by the result to a string
-	.Map("Date", sby => sby.StringDate, value => ((DateTime)value).ToShortDateString())
-	.Execute();
-```
-### Stored Procedure with output parameter
-```csharp
-int id = 0;
-var proc = context.Procedure("SetSale")
-    // adds a output parameter and executes the delegate after the procedure was executed
-	.AddParameter("ID", () => id, ret => id = ret)
-    .AddParameter("value", () => somevalue)
-    .Execute<SalesByYear>();
-```
-
-
-PersistenceMap is developed by [wickedflame](http://wickedflame.github.com/) under the [Ms-PL License](License.txt).
