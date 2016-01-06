@@ -1,5 +1,3 @@
-![wickedflame persistencemap](assets/wickedflame persistencemap - black.png)
-
 PersistenceMap
 ==============
 [![Build status](https://ci.appveyor.com/api/projects/status/i43jveqowctku03x/branch/master?svg=true)](https://ci.appveyor.com/project/chriswalpen/persistencemap/branch/master)
