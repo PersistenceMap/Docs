@@ -7,10 +7,10 @@ pages:
 
 - SQL:
     - Create a Context: sql/context.md
-    - Database:
+    
         - Create a Database with Code First: sql/create-database.md
         - Add Tables to a Database with Code First: sql/create-table.md
-    - Reading Data:
+    
         - Reading Data: sql/select.md
     - StoredProcedure: sql/storedprocedures.md
 - SQLite:
