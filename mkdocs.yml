@@ -18,3 +18,5 @@ pages:
     - Code First: sqlite/create-database.md
     - Create Tables: common/create-table.md
     - Diagnostics: common/diagnostics.md
+
+theme: Readable
