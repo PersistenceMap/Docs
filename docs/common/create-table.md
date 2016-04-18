@@ -1,8 +1,8 @@
 ## Add a Table to a Database
 The following Sample adds two tables to the Database defined in the ConnectionString. 
-The structure of the tables are defined with the object definition.
-| Table name | Defined by the Name of the Type                 | 
-| Fields     | Defined and Named by the Properties of the Type | 
+The structure of the tables are defined with the object definition.  
+| Table name | Defined by the Name of the Type                 |  
+| Fields     | Defined and Named by the Properties of the Type |  
  
 The Tables are only created when the Context is Commited.
 
