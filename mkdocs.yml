@@ -11,12 +11,15 @@ pages:
     - Create Tables: common/create-table.md
     - Reading Data: common/select.md
     - Stored Procedure: sql/storedprocedures.md
-    - Diagnostics: common/diagnostics.md
 
 - SQLite:
     - Create a Context: sqlite/context.md
     - Code First: sqlite/create-database.md
     - Create Tables: common/create-table.md
-    - Diagnostics: common/diagnostics.md
 
-theme: mkdocs
+- Diagnostics: common/diagnostics.md
+
+theme: 'mkdocs'
+
+# http://www.mkdocs.org/user-guide/custom-themes/
+# favicon
