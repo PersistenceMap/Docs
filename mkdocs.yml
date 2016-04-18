@@ -19,4 +19,4 @@ pages:
     - Create Tables: common/create-table.md
     - Diagnostics: common/diagnostics.md
 
-theme: Readable
+theme: mkdocs
