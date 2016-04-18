@@ -7,19 +7,14 @@ pages:
 
 - SQL:
     - Create a Context: sql/context.md
-    #- Database:
-        - Code First: sql/create-database.md
-        - Create Tables: common/create-table.md
-    #- Reading Data:
-        - Reading Data: common/select.md
-    - StoredProcedure: sql/storedprocedures.md
-    #- Configuration:
-       - Diagnostics: common/diagnostics.md
+    - Code First: sql/create-database.md
+    - Create Tables: common/create-table.md
+    - Reading Data: common/select.md
+    - Stored Procedure: sql/storedprocedures.md
+    - Diagnostics: common/diagnostics.md
 
 - SQLite:
     - Create a Context: sqlite/context.md
-    #- Database:
-        - Code First: sqlite/create-database.md
-        - Create Tables: common/create-table.md
-    #- Configuration:
-       - Diagnostics: common/diagnostics.md
+    - Code First: sqlite/create-database.md
+    - Create Tables: common/create-table.md
+    - Diagnostics: common/diagnostics.md
