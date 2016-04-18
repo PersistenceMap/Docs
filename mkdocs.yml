@@ -13,8 +13,12 @@ pages:
     #- Reading Data:
         - Reading Data: common/select.md
     - StoredProcedure: sql/storedprocedures.md
+    - Configuration:  
+       - Diagnostics: common/diagnostics.md
 - SQLite:
     - Create a Context: sqlite/context.md
     #- Database:
         - Code First: sqlite/create-database.md
         - Create Tables: common/create-table.md
+    - Configuration:  
+       - Diagnostics: common/diagnostics.md
